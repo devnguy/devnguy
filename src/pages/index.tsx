@@ -1,5 +1,6 @@
 import * as React from 'react'
-import SyntaxHighlighter from 'react-syntax-highlighter'
+import styled from 'styled-components'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import materialPalenight from '../utils/material-palenight'
 
 import Layout from '../components/Layout'
@@ -12,6 +13,12 @@ const devnguy = {
 }
 `
 
+const Container = styled.div`
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+`
+
 const Code = () => (
   <SyntaxHighlighter language="javascript" style={materialPalenight}>
     {codeString}
@@ -22,7 +29,9 @@ export default () => (
   <>
     <Layout>
       <main>
-        <Code />
+        <Container>
+          <Code />
+        </Container>
       </main>
     </Layout>
   </>
