@@ -1,13 +1,22 @@
 import * as React from 'react'
+import styled from 'styled-components'
+
+const HeaderStyles = styled.header`
+  h1 {
+    font-style: italic;
+    color: var(--blue);
+    font-weight: 400;
+  }
+`
 
 interface Props {
   title: string
 }
 
 const Header = ({ title }: Props) => (
-  <div>
-    <h1 style={{ fontStyle: 'italic', fontWeight: 400 }}>{title}</h1>
-  </div>
+  <HeaderStyles>
+    <h1>{title}</h1>
+  </HeaderStyles>
 )
 
 export default Header

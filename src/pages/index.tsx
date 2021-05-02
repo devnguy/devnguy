@@ -1,9 +1,10 @@
 import * as React from 'react'
-import Header from '../components/Header'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import materialPalenight from '../utils/material-palenight'
 
 import Layout from '../components/Layout'
 
-const content = `
+const codeString = `
 const devnguy = {
   name: 'Devin Nguyen',
   occupation: 'Full Stack Developer',
@@ -11,11 +12,17 @@ const devnguy = {
 }
 `
 
+const Code = () => (
+  <SyntaxHighlighter language="javascript" style={materialPalenight}>
+    {codeString}
+  </SyntaxHighlighter>
+)
+
 export default () => (
   <>
     <Layout>
       <main>
-        <code>{content}</code>
+        <Code />
       </main>
     </Layout>
   </>

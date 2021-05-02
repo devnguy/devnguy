@@ -15,7 +15,8 @@ export default () => (
         </p>
         <p>
           I’m passionate about technologies that make our lives easier. I love
-          tinkering with tools that eventually* increase my productivity.
+          tinkering with tools and libraries that eventually* increase my
+          productivity.
         </p>
         <p>
           My free time is usually spent rewatching The Office for the nth time,

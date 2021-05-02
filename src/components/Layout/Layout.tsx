@@ -9,6 +9,7 @@ import Footer from '../Footer'
 const Styles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
+  padding: 0 1rem;
 `
 
 type Props = {

@@ -47,6 +47,11 @@ const GlobalStyles = createGlobalStyle`
 
   a {
     background-color: transparent;
+    text-decoration: none;
+    color: var(--lightGray);
+    :hover {
+      background-color: var(--accent);
+    }
   }
 
   abbr[title] {
