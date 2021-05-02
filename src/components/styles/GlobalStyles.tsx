@@ -1,13 +1,27 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+  :root {
+    --accent: #AB47BC;
+    --purple: #C792EA;
+    --green: #C3E88D;
+    --blue: #82AAFF;
+    --lightGray: #A6ACCD;
+    --gray: #676E95;
+    --darkGray: #292D3E;
+    --red: #F07178;
+    --maxWidth: 1140px;
+  }
   html {
     font-family: Operator Mono;
-    line-height: 1.15; /* 1 */
+    line-height: 1.75; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
+    font-size: 24px;
   }
 
   body {
+    background-color: var(--darkGray);
+    color: var(--lightGray);
     margin: 0;
   }
 
@@ -16,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 2.66rem;
     margin: 0.67em 0;
   }
 

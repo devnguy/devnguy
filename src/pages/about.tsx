@@ -1,13 +1,28 @@
 import * as React from 'react'
 import Header from '../components/Header'
-import Nav from '../components/Nav'
 
-const About = () => (
+import Layout from '../components/Layout'
+
+export default () => (
   <>
-    <Header headerText="About" />
-    <Nav />
-    <div>this is me</div>
+    <Layout>
+      <Header title="about devin nguyen" />
+      <main>
+        <p>
+          Hi, I’m Devin. Friends call me Dev. Coworkers also call me a dev. I
+          currently work as an associate engineer doing full stack web
+          development.
+        </p>
+        <p>
+          I’m passionate about technologies that make our lives easier. I love
+          tinkering with tools that eventually* increase my productivity.
+        </p>
+        <p>
+          My free time is usually spent rewatching The Office for the nth time,
+          trying new types of tea, waiting for mechanical keyboard parts to come
+          in, and finding music that sounds similar to the band Alvvays.
+        </p>
+      </main>
+    </Layout>
   </>
 )
-
-export default About

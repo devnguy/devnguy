@@ -1,17 +1,22 @@
 import * as React from 'react'
 import Header from '../components/Header'
-import Nav from '../components/Nav'
-import Fonts from '../components/styles/Fonts'
-import GlobalStyles from '../components/styles/GlobalStyles'
 
-const Home = () => (
+import Layout from '../components/Layout'
+
+const content = `
+const devnguy = {
+  name: 'Devin Nguyen',
+  occupation: 'Full Stack Developer',
+  isCool: true
+}
+`
+
+export default () => (
   <>
-    <GlobalStyles />
-    <Fonts />
-    <Header headerText="Home" />
-    <Nav />
-    <div style={{ fontStyle: 'italic' }}>welcome to gatsby</div>
+    <Layout>
+      <main>
+        <code>{content}</code>
+      </main>
+    </Layout>
   </>
 )
-
-export default Home
