@@ -29,7 +29,7 @@ module.exports = {
       {
         trailingComma: "es5",
         semi: false,
-        singleQuote: false,
+        singleQuote: true,
         printWidth: 120,
       },
     ],
