@@ -11,24 +11,28 @@ const Fonts = createGlobalStyle`
     src: url(${OperatorMonoBook_Web}) format('woff2');
     font-weight: 400;
     font-style: normal;
+    font-display: block;
   }
   @font-face {
     font-family: 'Operator Mono';
     src: url(${OperatorMonoBookItalic_Web}) format('woff2');
     font-weight: 400;
     font-style: italic;
+    font-display: block;
   }
   @font-face {
     font-family: 'Operator Mono';
     src: url(${OperatorMonoBold_Web}) format('woff2');
     font-weight: 700;
     font-style: normal;
+    font-display: block;
   }
   @font-face {
     font-family: 'Operator Mono';
     src: url(${OperatorMonoBoldItalic_Web}) format('woff2');
     font-weight: 700;
     font-style: italic;
+    font-display: block;
   }
 `
 export default Fonts
