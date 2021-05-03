@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: Operator Mono;
     line-height: 1.75; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
-    font-size: 24px;
+    font-size: 18px;
   }
 
   body {

@@ -8,7 +8,7 @@ export default () => (
     <Layout>
       <Header title="blog" />
       <main>
-        <p>new page who dis</p>
+        <p>new blog who dis</p>
       </main>
     </Layout>
   </>
