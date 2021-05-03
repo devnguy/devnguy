@@ -22,7 +22,7 @@ const Layout = ({ children }: Props) => (
     <GlobalStyles />
     <Fonts />
     <Helmet>
-      <title>what up</title>
+      <title>devnguy</title>
     </Helmet>
     <Styles>
       <Nav />
