@@ -23,7 +23,7 @@ export default () => (
           <li>Headphones: Sony WH-1000XM3</li>
           <li>Editor: Visual Studio Code with a VIM extension</li>
           <li>Terminal: Kitty</li>
-          <li>Theme: Material Pale Night</li>
+          <li>Theme: Material Palenight</li>
           <li>Font: Operator Mono</li>
           <li>Tiling window manager: Yabai with SKHD</li>
           <li>File manager: Ranger </li>

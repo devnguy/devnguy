@@ -26,7 +26,7 @@ const NavLogoStyles = styled.div``
 
 const NavLogo = () => <Link to="/">devnguy</Link>
 
-type NavItemProps = {
+interface NavItemProps {
   to: string
   linkName: string
 }

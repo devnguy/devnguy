@@ -51,6 +51,7 @@ const GlobalStyles = createGlobalStyle`
     color: var(--lightGray);
     :hover {
       background-color: var(--accent);
+      transition: 200ms;
     }
   }
 

@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Header from '../components/Header'
 import Layout from '../components/Layout'
+import Main from '../components/Main'
 
 const ProjectSectionStyles = styled.section`
   h2 {
@@ -18,8 +19,7 @@ const ProjectSectionStyles = styled.section`
 export default () => (
   <>
     <Layout>
-      <Header title="projects by devin nguyen" />
-      <main>
+      <Main title="projects by devin nguyen">
         <ProjectSectionStyles>
           <h2>'devnguy'</h2>
           <p>Gatsby, React, Typescript</p>
@@ -32,7 +32,7 @@ export default () => (
           <h2>'Hawkins Library'</h2>
           <p>NextJS, React, MySQL</p>
         </ProjectSectionStyles>
-      </main>
+      </Main>
     </Layout>
   </>
 )

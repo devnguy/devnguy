@@ -4,6 +4,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import materialPalenight from '../utils/material-palenight'
 
 import Layout from '../components/Layout'
+import Main from '../components/Main'
 
 const codeString = `
 const devnguy = {
@@ -28,11 +29,11 @@ const Code = () => (
 export default () => (
   <>
     <Layout>
-      <main>
+      <Main>
         <Container>
           <Code />
         </Container>
-      </main>
+      </Main>
     </Layout>
   </>
 )

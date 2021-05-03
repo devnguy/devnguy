@@ -10,9 +10,10 @@ const Styles = styled.div`
   max-width: var(--maxWidth);
   margin: 0 auto;
   padding: 0 1rem;
+  min-height: 100vh;
 `
 
-type Props = {
+interface Props {
   children: React.ReactNode
 }
 
