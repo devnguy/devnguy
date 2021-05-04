@@ -2,8 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import materialPalenight from '../utils/material-palenight'
-
-import Layout from '../components/Layout'
 import Main from '../components/Main'
 
 const codeString = `
@@ -15,9 +13,11 @@ const devnguy = {
 `
 
 const Container = styled.div`
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
 `
 
 const Code = () => (
@@ -28,12 +28,10 @@ const Code = () => (
 
 export default () => (
   <>
-    <Layout>
-      <Main>
-        <Container>
-          <Code />
-        </Container>
-      </Main>
-    </Layout>
+    <Main>
+      <Container>
+        <Code />
+      </Container>
+    </Main>
   </>
 )

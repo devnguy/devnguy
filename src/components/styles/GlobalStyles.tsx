@@ -13,7 +13,12 @@ const GlobalStyles = createGlobalStyle`
     --maxWidth: 1140px;
   }
   html {
-    font-family: Operator Mono;
+    /* font-family: Operator Mono; */
+    /* @font-face {
+      font-family: Operator Mono;
+      src: url();
+    } */    
+    font-family: 'Operator Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     line-height: 1.75; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
     font-size: 18px;
