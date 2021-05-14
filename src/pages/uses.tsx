@@ -15,7 +15,7 @@ export default () => (
       <li>Dock: CalDigit TS3 Plus Thunderbolt 3</li>
       <li>Headphones: Sony WH-1000XM3</li>
       <li>Editor: Visual Studio Code with a VIM extension</li>
-      <li>Terminal: Kitty</li>
+      <li>Terminal: Kitty + Oh My Zsh + Powerlevel10k</li>
       <li>Theme: Material Palenight</li>
       <li>Font: Operator Mono</li>
       <li>Tiling window manager: Yabai with SKHD</li>
