@@ -2,29 +2,15 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/Hero.astro";
 import Section from "../components/common/Section.astro";
-import FeaturedProjects from "../components/home/FeaturedProjects.astro";
-import FeaturedExperience from "../components/home/FeaturedExperience.astro";
 import { getConfigurationCollection } from "../lib/utils";
 import { getCollection } from "astro:content";
+
 const articles = (await getCollection("blog")).sort(
   (a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf(),
 );
 import ArticleSnippet from "../components/ArticleSnippet.astro";
 
 const { data: config } = await getConfigurationCollection();
-
-const featuredProjects = (
-  await getCollection("project", (e) => e.data.featured)
-).map((e) => ({
-  ...e.data,
-  url: `${config.site.baseUrl}/projects/${e.data.slug}`,
-}));
-const featuredExperience = (
-  await getCollection("experience", (e) => e.data.featured)
-).map((e) => ({
-  ...e.data,
-  url: `${config.site.baseUrl}/experience/${e.data.slug}`,
-}));
 ---
 
 <Layout>
@@ -71,7 +57,7 @@ const featuredExperience = (
             <ArticleSnippet
               title={article.data.title}
               description={article.data.description}
-              url={`${config.site.baseUrl}/blog/${article.data.slug}`}
+              url={`/blog/${article.data.slug}`}
               timestamp={article.data.timestamp}
             />
           </li>

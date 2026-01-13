@@ -235,7 +235,7 @@ const configuration = defineCollection({
      * This defines the URLs for the main navigation links.
      */
     menu: z.object({
-      home: z.string().default("/"),
+      blog: z.string().default("/"),
       experience: z.string().default("/experience"),
       projects: z.string().default("/projects"),
       /** Add other menu items here **/

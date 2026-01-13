@@ -4,18 +4,7 @@ slug: measurabl
 description: TODO update this
 longDescription: TODO update this
 cardImage: "https://zaggonaut.dev/michael-dam-unsplash.webp"
-tags:
-  [
-    "typescript",
-    "react",
-    "graphql",
-    "microservices",
-    "aws",
-    "terraform",
-    "docker",
-    "kubernetes",
-    "another",
-  ]
+tags: ["typescript", "react", "microservices"]
 start: 2022-07-26T00:00:00+00:00
 end: 2025-07-23T00:00:00+00:00
 featured: true

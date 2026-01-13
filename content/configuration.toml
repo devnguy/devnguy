@@ -19,7 +19,7 @@ keywords = [
 ]
 
 [_.blogMeta]
-title = "devnguy Blog"
+title = "devnguy blog"
 description = "Practical wisdom, unfiltered thoughts, and hot takes."
 longDescription = "Web development, tech trends, and the occasional programming mishap."
 cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
@@ -33,7 +33,7 @@ keywords = [
 ]
 
 [_.projectMeta]
-title = "devnguy Projects"
+title = "devnguy projects"
 description = "A list of my web development projects and developer tools."
 longDescription = "All of my projects, including both frontend and full-stack applications."
 cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
@@ -74,7 +74,6 @@ noPosts = "No posts found."
 noProjects = "No projects found."
 
 [_.menu]
-home = "/"
+blog = "/"
 projects = "/projects"
-blog = "/blog"
 experience = "/experience"
