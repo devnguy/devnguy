@@ -210,6 +210,11 @@ const configuration = defineCollection({
       projectsName: z.string().default("Projects"),
 
       /**
+       * The text used when displaying the projects section on the homepage.
+       */
+      experienceName: z.string().default("Experience"),
+
+      /**
        * The text used for the "View All" button in the articles and projects sections.
        */
       viewAll: z.string().default("View All"),
@@ -231,8 +236,8 @@ const configuration = defineCollection({
      */
     menu: z.object({
       home: z.string().default("/"),
+      experience: z.string().default("/experience"),
       projects: z.string().default("/projects"),
-      blog: z.string().default("/blog"),
       /** Add other menu items here **/
     }),
   }),
@@ -312,57 +317,59 @@ const blog = defineCollection({
  */
 const project = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./content/projects" }),
-  schema: z.object({
-    /**
-     * The title of the project.
-     */
-    title: z.string(),
-    
-    /**
-     * The slug for the project, used in the URL.
-     */
-    slug: z.string().optional(),
+  schema: z
+    .object({
+      /**
+       * The title of the project.
+       */
+      title: z.string(),
 
-    /**
-     * The short description of the project, used in Open Graph metadata and as a fallback for SEO.
-     */
-    description: z.string(),
+      /**
+       * The slug for the project, used in the URL.
+       */
+      slug: z.string().optional(),
 
-    /**
-     * The long description of the project, used in Open Graph metadata and as a fallback for SEO.
-     */
-    longDescription: z.string().optional(),
+      /**
+       * The short description of the project, used in Open Graph metadata and as a fallback for SEO.
+       */
+      description: z.string(),
 
-    /**
-     * The URL of the card image for social media sharing.
-     */
-    cardImage: z.string().url().optional(),
+      /**
+       * The long description of the project, used in Open Graph metadata and as a fallback for SEO.
+       */
+      longDescription: z.string().optional(),
 
-    /**
-     * The tags associated with the project, used for categorization and filtering.
-     */
-    tags: z.array(z.string()).optional(),
+      /**
+       * The URL of the card image for social media sharing.
+       */
+      cardImage: z.string().url().optional(),
 
-    /**
-     * The github repository URL for the project.
-     */
-    githubUrl: z.string().url().optional(),
+      /**
+       * The tags associated with the project, used for categorization and filtering.
+       */
+      tags: z.array(z.string()).optional(),
 
-    /**
-     * The live demo URL for the project, if applicable.
-     */
-    liveDemoUrl: z.string().url().optional(),
+      /**
+       * The github repository URL for the project.
+       */
+      githubUrl: z.string().url().optional(),
 
-    /**
-     * The timestamp of the project, used for sorting and displaying the date.
-     */
-    timestamp: z.date().transform((val) => new Date(val)),
+      /**
+       * The live demo URL for the project, if applicable.
+       */
+      liveDemoUrl: z.string().url().optional(),
 
-    /**
-     * Whether the project is featured on the homepage.
-     */
-    featured: z.boolean().default(false),
-  }).transform((data) => {
+      /**
+       * The timestamp of the project, used for sorting and displaying the date.
+       */
+      timestamp: z.date().transform((val) => new Date(val)),
+
+      /**
+       * Whether the project is featured on the homepage.
+       */
+      featured: z.boolean().default(false),
+    })
+    .transform((data) => {
       const slug =
         data.slug ??
         data.title
@@ -377,4 +384,71 @@ const project = defineCollection({
     }),
 });
 
-export const collections = { blog, project, configuration };
+const experience = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./content/experience" }),
+  schema: z
+    .object({
+      /**
+       * The title of the experience.
+       */
+      title: z.string(),
+
+      /**
+       * The slug for the experience, used in the URL.
+       */
+      slug: z.string().optional(),
+
+      /**
+       * The short description of the experience, used in Open Graph metadata and as a fallback for SEO.
+       */
+      description: z.string(),
+
+      /**
+       * The long description of the project, used in Open Graph metadata and as a fallback for SEO.
+       */
+      longDescription: z.string().optional(),
+
+      /**
+       * The URL of the card image for social media sharing.
+       */
+      cardImage: z.string().url().optional(),
+
+      /**
+       * The tags associated with the experience, used for categorization and filtering.
+       */
+      tags: z.array(z.string()).optional(),
+
+      /**
+       * The start date of the experience
+       */
+      start: z.date().transform((val) => new Date(val)),
+
+      /**
+       * The end date of the experience
+       */
+      end: z
+        .date()
+        .optional()
+        .transform((val) => val && new Date(val)),
+
+      /**
+       * Whether the experience is featured on the homepage.
+       */
+      featured: z.boolean().default(false),
+    })
+    .transform((data) => {
+      const slug =
+        data.slug ??
+        data.title
+          .toLowerCase()
+          .replace(/\s+/g, "-")
+          .replace(/[^\w-]/g, "");
+      const newData = {
+        ...data,
+        slug,
+      };
+      return newData;
+    }),
+});
+
+export const collections = { blog, experience, project, configuration };

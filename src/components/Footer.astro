@@ -41,7 +41,10 @@ const year = date.getFullYear();
       <div class="flex flex-row sm:flex-col gap-4">
         {
           config.personal.githubProfile && (
-            <Anchor url={config.personal.githubProfile} aria-label={`${config.personal.name} GitHub Profile`}>
+            <Anchor
+              url={config.personal.githubProfile}
+              aria-label={`${config.personal.name} GitHub Profile`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -58,7 +61,10 @@ const year = date.getFullYear();
         }
         {
           config.personal.twitterProfile && (
-            <Anchor url={config.personal.twitterProfile} aria-label={`${config.personal.name} Twitter Profile`}>
+            <Anchor
+              url={config.personal.twitterProfile}
+              aria-label={`${config.personal.name} Twitter Profile`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"
@@ -75,7 +81,10 @@ const year = date.getFullYear();
         }
         {
           config.personal.linkedinProfile && (
-            <Anchor url={config.personal.linkedinProfile} aria-label={`${config.personal.name} LinkedIn Profile`}>
+            <Anchor
+              url={config.personal.linkedinProfile}
+              aria-label={`${config.personal.name} LinkedIn Profile`}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="32"

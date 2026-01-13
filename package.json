@@ -14,11 +14,13 @@
     "@astrojs/tailwind": "^6.0.2",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
-    "astro": "^5.10.1",
+    "astro": "^5.16.9",
     "tailwindcss": "^4.1.11",
     "toml": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.33"
+    "@types/node": "^22.15.33",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

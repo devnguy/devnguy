@@ -1,16 +1,17 @@
 ---
+import { processArticleDate } from "../lib/utils";
 import Anchor from "./common/Anchor.astro";
 
 export type Props = {
   title: string;
   description: string;
   url: string;
-  githubUrl?: string;
-  liveUrl?: string;
   tags: string[];
+  start: Date;
+  end?: Date;
 };
 
-const { title, description, url, githubUrl, liveUrl, tags } = Astro.props;
+const { title, description, url, tags, start, end } = Astro.props;
 ---
 
 <div class="relative flex flex-col gap-3 mb-8 hover-zag-dotted-grid">
@@ -18,22 +19,14 @@ const { title, description, url, githubUrl, liveUrl, tags } = Astro.props;
     <Anchor url={url} class="text-xl">
       {title}
     </Anchor>
-    <div class="flex gap-2">
-      {
-        githubUrl ? (
-          <Anchor url={githubUrl} class="text-base" external>
-            GitHub
-          </Anchor>
-        ) : null
-      }
-      {
-        liveUrl ? (
-          <Anchor url={liveUrl} class="text-base" external>
-            Live
-          </Anchor>
-        ) : null
-      }
-    </div>
+  </div>
+  <div class="zag-muted flex gap-2">
+    { 
+      processArticleDate(start)
+    }
+    {
+      end ? (` - ${processArticleDate(end)}`)  : null
+    }
   </div>
   <p class="zag-text zag-transition">
     {description}
