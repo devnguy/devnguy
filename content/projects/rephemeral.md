@@ -1,10 +1,10 @@
 ---
 title: Rephemeral
 slug: rephemeral
-description: A tool for artists who want to use references for timed drawings, whether the references be from a Pinterest board, or from a local machine.
+description: A reference tool for visual artists
 longDescription: A tool for artists who want to use references for timed drawings, whether the references be from a Pinterest board, or from a local machine.
 cardImage: "https://zaggonaut.dev/michael-dam-unsplash.webp"
-tags: ["typescript", "nextjs", "shadcn", "tailwind"]
+tags: ["typescript", "nextjs", "tailwind"]
 githubUrl: https://github.com/devnguy/rephemeral
 timestamp: 2025-10-26T00:00:00+00:00
 featured: true
