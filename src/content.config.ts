@@ -202,7 +202,7 @@ const configuration = defineCollection({
       /**
        * The text used when displaying the articles section on the homepage.
        */
-      articlesName: z.string().default("Articles"),
+      blogName: z.string().default("Blog"),
 
       /**
        * The text used when displaying the projects section on the homepage.
@@ -222,7 +222,7 @@ const configuration = defineCollection({
       /**
        * The text displayed when there are no articles found.
        */
-      noArticles: z.string().default("No articles found."),
+      noPosts: z.string().default("No posts found."),
 
       /**
        * The text displayed when there are no projects found.

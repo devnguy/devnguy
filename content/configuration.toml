@@ -6,24 +6,45 @@ baseUrl = "http://localhost:4321"
 
 [_.globalMeta]
 title = "devnguy"
-description = "Devin Nguyen's personal portfolio."
+description = "Devin Nguyen's personal portfolio and blog."
 longDescription = "Zaggonaut is a retro-inspired theme for Astro, built using TypeScript, TailwindCSS, and Astro."
 cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
-keywords = ["web development", "design", "technology"]
+keywords = [
+  "web development",
+  "software engineer",
+  "design",
+  "technology",
+  "typescript",
+  "react",
+]
 
 [_.blogMeta]
 title = "devnguy Blog"
 description = "Practical wisdom, unfiltered thoughts, and hot takes."
 longDescription = "Web development, tech trends, and the occasional programming mishap."
 cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
-keywords = ["web development", "design", "technology"]
+keywords = [
+  "web development",
+  "software engineer",
+  "design",
+  "technology",
+  "typescript",
+  "react",
+]
 
 [_.projectMeta]
 title = "devnguy Projects"
 description = "A list of my web development projects and developer tools."
 longDescription = "All of my projects, including both frontend and full-stack applications."
 cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
-keywords = ["web development", "design", "technology"]
+keywords = [
+  "web development",
+  "software engineer",
+  "design",
+  "technology",
+  "typescript",
+  "react",
+]
 
 [_.notFoundMeta]
 title = "devnguy 404"
@@ -45,11 +66,11 @@ twitterProfile = "https://twitter.com"
 linkedinProfile = "https://linkedin.com/"
 
 [_.texts]
-articlesName = "Articles"
+blogName = "Blog"
 experienceName = "Experience"
 projectsName = "Projects"
 viewAll = "View All"
-noArticles = "No articles found."
+noPosts = "No posts found."
 noProjects = "No projects found."
 
 [_.menu]

@@ -4,6 +4,7 @@ import type { ArticleFrontmatter } from "../lib/types";
 import Section from "../components/common/Section.astro";
 import Prose from "../components/Prose.astro";
 import Layout from "./Layout.astro";
+import Anchor from "../components/common/Anchor.astro";
 
 type Props = { frontmatter: ArticleFrontmatter };
 
@@ -65,12 +66,17 @@ const { data: config } = await getConfigurationCollection();
       </h1>
       <div class="flex justify-between">
         <span>{articleDate}</span>
-        <span>{frontmatter.readTime} min</span>
       </div>
     </div>
     <Prose>
       <slot />
     </Prose>
-    <p class="pt-8">~{config.personal.name}</p>
+    <p class="flex pt-8">
+      <Anchor url="/">
+        <span class="w-fit">
+          {config.personal.name}
+        </span>
+      </Anchor>
+    </p>
   </Section>
 </Layout>

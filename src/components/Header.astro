@@ -6,7 +6,7 @@ import ThemeToggle from "./ThemeToggle.astro";
 const { data: config } = await getConfigurationCollection();
 ---
 
-<header class="zag-bg zag-border-b zag-transition sticky top-0 w-full z-10">
+<header class="zag-bg zag-transition sticky top-0 w-full z-10">
   <div
     class="zag-bg zag-transition sm:hidden relative z-50 py-4 flex items-center"
   >
@@ -23,7 +23,7 @@ const { data: config } = await getConfigurationCollection();
     </button>
   </div>
   <nav
-    class="zag-bg zag-border-b zag-transition fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none"
+    class="zag-bg zag-transition fixed sm:relative inset-x-0 top-0 h-auto sm:px-4 flex justify-between flex-col gap-8 py-4 text-xl sm:flex-row max-w-2xl mx-auto sm:pt-4 sm:border-none"
   >
     <div
       class="flex flex-col font-mono font-medium gap-4 sm:flex-row px-4 sm:px-0 mt-16 sm:mt-0"

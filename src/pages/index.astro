@@ -6,6 +6,10 @@ import FeaturedProjects from "../components/home/FeaturedProjects.astro";
 import FeaturedExperience from "../components/home/FeaturedExperience.astro";
 import { getConfigurationCollection } from "../lib/utils";
 import { getCollection } from "astro:content";
+const articles = (await getCollection("blog")).sort(
+  (a, b) => b.data.timestamp.valueOf() - a.data.timestamp.valueOf(),
+);
+import ArticleSnippet from "../components/ArticleSnippet.astro";
 
 const { data: config } = await getConfigurationCollection();
 
@@ -59,10 +63,20 @@ const featuredExperience = (
   <Section class="my-16">
     <Hero />
   </Section>
-  <Section>
-    <FeaturedExperience featuredExperience={featuredExperience} />
-  </Section>
-  <Section>
-    <FeaturedProjects featuredProjects={featuredProjects} />
+  <Section class="my-8">
+    <ul>
+      {
+        articles.map((article) => (
+          <li>
+            <ArticleSnippet
+              title={article.data.title}
+              description={article.data.description}
+              url={`${config.site.baseUrl}/blog/${article.data.slug}`}
+              timestamp={article.data.timestamp}
+            />
+          </li>
+        ))
+      }
+    </ul>
   </Section>
 </Layout>

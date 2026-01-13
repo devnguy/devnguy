@@ -4,9 +4,9 @@ slug: devnguy
 description: Devin Nguyen's portfolio
 longDescription: Devin Nguyen's portfolio
 cardImage: "https://zaggonaut.dev/michael-dam-unsplash.webp"
-tags: ["astro", "portfolio", "open-source"]
-githubUrl: https://github.com/devnguy
-timestamp: 2025-10-25T00:00:00+00:00
+tags: ["astro"]
+githubUrl: https://github.com/devnguy/devnguy
+timestamp: 2026-01-12T00:00:00+00:00
 ---
 
 ## Details
