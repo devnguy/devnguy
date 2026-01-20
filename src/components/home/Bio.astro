@@ -1,0 +1,13 @@
+---
+import { getConfigurationCollection } from "../../lib/utils";
+
+const { data: config } = await getConfigurationCollection();
+---
+
+<div class="flex flex-col items-center sm:flex-row gap-8">
+  <div>
+    <p>
+      {config.globalMeta.longDescription}
+    </p>
+  </div>
+</div>

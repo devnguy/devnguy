@@ -7,8 +7,8 @@ baseUrl = "http://localhost:4321"
 [_.globalMeta]
 title = "devnguy"
 description = "Devin Nguyen's personal portfolio and blog."
-longDescription = "Zaggonaut is a retro-inspired theme for Astro, built using TypeScript, TailwindCSS, and Astro."
-cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
+longDescription = "I'm a software engineer and neovim enthusiast, currently exploring game development."
+cardImage = "https://devnguy.com/card-image.jpg"
 keywords = [
   "web development",
   "software engineer",
@@ -20,9 +20,9 @@ keywords = [
 
 [_.blogMeta]
 title = "devnguy blog"
-description = "Practical wisdom, unfiltered thoughts, and hot takes."
+description = "Guides, neovim, and ponderings"
 longDescription = "Web development, tech trends, and the occasional programming mishap."
-cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
+cardImage = "https://devnguy.com/card-image.jpg"
 keywords = [
   "web development",
   "software engineer",
@@ -36,7 +36,7 @@ keywords = [
 title = "devnguy projects"
 description = "A list of my web development projects and developer tools."
 longDescription = "All of my projects, including both frontend and full-stack applications."
-cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
+cardImage = "https://devnguy.com/card-image.jpg"
 keywords = [
   "web development",
   "software engineer",
@@ -49,8 +49,8 @@ keywords = [
 [_.notFoundMeta]
 title = "devnguy 404"
 description = "The page you are looking for does not exist."
-longDescription = "The page you are looking for does not exist. Maybe it never existed. Spooky."
-cardImage = "https://zaggonaut.dev/michael-dam-unsplash.webp"
+longDescription = "The page you are looking for does not exist."
+cardImage = "https://devnguy.com/card-image.jpg"
 
 [_.hero]
 title = "Devin Nguyen"
@@ -74,6 +74,7 @@ noPosts = "No posts found."
 noProjects = "No projects found."
 
 [_.menu]
-blog = "/"
+home = "/"
+blog = "/blog"
 projects = "/projects"
 experience = "/experience"
